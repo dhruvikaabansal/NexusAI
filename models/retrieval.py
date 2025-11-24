@@ -10,12 +10,34 @@ class Retriever:
         
         # Static Knowledge Base for qualitative/strategic queries (Mocking external documents)
         self.knowledge_base = [
-            {"text": "Risk Assessment: Supply chain volatility in the North region is a critical risk due to recent logistics disruptions.", "source": "Q3 Risk Report", "roles": ["CEO", "COO"]},
-            {"text": "Competitor Update: Competitor 'TechGiant' has lowered prices on their entry-level units by 10%, pressuring our margins.", "source": "Market Intelligence", "roles": ["CEO", "Sales"]},
-            {"text": "Revenue Forecast: Q4 revenue is projected to exceed targets by 15%, driven by strong adoption of Gadget_Z.", "source": "Financial Outlook", "roles": ["CEO", "CFO"]},
-            {"text": "Strategic Initiative: 'Project Apollo' aims to automate 50% of the assembly line by next year to reduce overhead.", "source": "Strategy Doc", "roles": ["CEO", "COO"]},
-            {"text": "Regulatory Alert: New safety compliance standards for battery disposal will come into effect next month.", "source": "Legal Brief", "roles": ["CEO", "COO", "HR"]},
-            {"text": "Talent Retention: Engineering turnover has decreased by 5% following the new equity program.", "source": "HR Quarterly", "roles": ["CEO", "HR"]}
+            # CEO Strategic Content
+            {"text": "Risk Assessment: Supply chain volatility in the North region is a critical risk due to recent logistics disruptions. Mitigation: Diversify suppliers and increase buffer inventory.", "source": "Q3 Risk Report", "roles": ["CEO", "COO"]},
+            {"text": "Competitor Update: Competitor 'TechGiant' has lowered prices on their entry-level units by 10%, pressuring our margins. Recommendation: Focus on premium features and customer service differentiation.", "source": "Market Intelligence", "roles": ["CEO", "CFO"]},
+            {"text": "Revenue Forecast: Q4 revenue is projected to exceed targets by 15%, driven by strong adoption of Gadget_Z in the West region. Expected total: $2.8M for Q4.", "source": "Financial Outlook", "roles": ["CEO", "CFO"]},
+            {"text": "Strategic Initiative: 'Project Apollo' aims to automate 50% of the assembly line by next year to reduce overhead costs by 20% and improve throughput by 30%.", "source": "Strategy Doc", "roles": ["CEO", "COO"]},
+            {"text": "Regulatory Alert: New safety compliance standards for battery disposal will come into effect next month. All manufacturing lines must be certified by Jan 15.", "source": "Legal Brief", "roles": ["CEO", "COO", "HR"]},
+            {"text": "Talent Retention: Engineering turnover has decreased by 5% following the new equity program. Current retention rate: 92% (up from 87%).", "source": "HR Quarterly", "roles": ["CEO", "HR"]},
+            
+            # CFO Financial Content
+            {"text": "Cost Reduction Memo: Analysis shows that energy costs account for 18% of total OpEx. Recommendation: Invest in energy-efficient motors for Lines A and C to save $45K annually.", "source": "CFO Analysis", "roles": ["CFO", "COO"]},
+            {"text": "Margin Analysis: Gadget_X has the highest margin at 42%, while Gadget_Y is at 28%. Focus sales efforts on premium products to improve overall profitability.", "source": "Product Profitability Report", "roles": ["CFO"]},
+            {"text": "Cash Flow Projection: Operating cash flow is stable at $1.2M/month. Accounts receivable days: 32 (target: 30). Recommend tightening payment terms with enterprise customers.", "source": "Treasury Report", "roles": ["CFO"]},
+            {"text": "Maintenance Budget: Total maintenance costs for Q3 were $127K, 8% under budget. Preventive maintenance program is reducing emergency repairs by 15%.", "source": "Finance Dashboard", "roles": ["CFO", "COO"]},
+            
+            # COO Operations Content
+            {"text": "Production Efficiency: Line B has the highest throughput at 485 units/day with only 12 minutes of downtime. Best practice: Implement Line B's maintenance schedule across all lines.", "source": "Operations Review", "roles": ["COO"]},
+            {"text": "Energy Consumption Analysis: Night shift (Shift 3) consumes 22% more energy per unit than day shift. Root cause: Older equipment on night crew. Recommendation: Rotate equipment usage.", "source": "Sustainability Report", "roles": ["COO", "CFO"]},
+            {"text": "Downtime Root Cause: Line C accounts for 40% of total downtime due to aging conveyor belts. Replacement scheduled for next month, expected to reduce downtime by 60%.", "source": "Maintenance Log", "roles": ["COO"]},
+            {"text": "Quality Metrics: Overall defect rate is 2.1%, down from 2.8% last quarter. Line A has the lowest rate at 1.4%. Quality training program showing positive results.", "source": "Quality Assurance Report", "roles": ["COO"]},
+            {"text": "Throughput vs Energy Correlation: Analysis shows strong correlation (r=0.78) between energy consumption and throughput. Higher production runs are more energy-efficient per unit.", "source": "Operations Analytics", "roles": ["COO"]},
+            
+            # HR People Content
+            {"text": "Performance Distribution: 68% of employees rated 'Good' or 'Excellent'. Top performers concentrated in Engineering (avg 4.2/5) and Sales (avg 4.0/5). Needs Improvement: 12% of workforce.", "source": "Annual Review Summary", "roles": ["HR"]},
+            {"text": "Headcount by Department: Engineering: 18, Sales: 12, Operations: 10, Finance: 5, HR: 4. Total headcount: 49. Hiring plan: Add 6 engineers in Q1.", "source": "HR Dashboard", "roles": ["HR"]},
+            {"text": "Safety Incidents: 8 incidents in Q3 (down from 12 in Q2). Severity: 6 minor, 2 moderate, 0 critical. New safety training program reduced incident rate by 33%.", "source": "Safety Report", "roles": ["HR", "COO"]},
+            {"text": "Employee Tenure: Average tenure is 4.2 years. High-tenure departments: Finance (6.1 yrs), Engineering (5.3 yrs). New hire retention (1-year): 88%.", "source": "Retention Analysis", "roles": ["HR"]},
+            {"text": "Safety Training Program: New comprehensive safety training launched in August. 100% of manufacturing staff certified. Next phase: Advanced equipment handling certification in January.", "source": "Training Memo", "roles": ["HR", "COO"]},
+            {"text": "Employee Engagement: eNPS score is 42 (Industry avg: 35). Top drivers: Career growth opportunities, competitive compensation. Improvement area: Work-life balance (score: 6.8/10).", "source": "Engagement Survey", "roles": ["HR", "CEO"]}
         ]
 
     def load_model(self):

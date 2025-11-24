@@ -7,10 +7,9 @@ import google.generativeai as genai
 from models.retrieval import Retriever
 
 router = APIRouter()
-DB_PATH = "hrcentral.db"
 
 # Initialize retriever (lazy load)
-retriever = Retriever(DB_PATH)
+retriever = Retriever()
 
 # Configure Gemini
 # In production, use os.environ.get("GEMINI_API_KEY")
