@@ -1,0 +1,51 @@
+incident_id,date,product_id,region,severity,description,resolution_time_hours,customer_satisfaction
+INC-9119,2023-02-26,Gadget_Y,East,Low,Overheating during charge,35.1,2
+INC-9216,2023-03-16,Gadget_Z,South,Medium,Physical damage on arrival,30.5,1
+INC-7401,2023-01-18,Gadget_Z,North,Low,Connectivity loss,14.3,2
+INC-8164,2023-01-18,Gadget_Y,South,Low,Physical damage on arrival,51.9,5
+INC-9534,2023-02-21,Gadget_X,East,High,Screen flicker,48.1,5
+INC-6720,2023-03-09,Gadget_Y,East,Medium,Battery drain,5.4,3
+INC-4381,2023-03-21,Gadget_X,West,Critical,Physical damage on arrival,2.9,2
+INC-5152,2023-01-05,Gadget_Y,South,Low,Battery drain,10.1,2
+INC-3663,2023-02-27,Gadget_Y,East,Low,Battery drain,32.6,2
+INC-6092,2023-01-07,Gadget_Y,South,Medium,Connectivity loss,38.9,5
+INC-6636,2023-03-16,Gadget_Y,West,Medium,Physical damage on arrival,9.1,2
+INC-1759,2023-01-07,Gadget_Z,East,Medium,Connectivity loss,33.9,1
+INC-7154,2023-01-26,Gadget_X,North,Critical,Physical damage on arrival,15.2,5
+INC-2008,2023-02-09,Gadget_X,East,Critical,Physical damage on arrival,102.1,5
+INC-9075,2023-03-31,Gadget_X,West,High,Connectivity loss,16.9,5
+INC-3803,2023-02-23,Gadget_Z,North,Critical,Screen flicker,33.4,2
+INC-2388,2023-02-27,Gadget_Y,East,Critical,Connectivity loss,23.8,1
+INC-2223,2023-02-20,Gadget_Y,East,High,Physical damage on arrival,12.2,3
+INC-3569,2023-01-12,Gadget_Y,West,Critical,Connectivity loss,90.1,4
+INC-4681,2023-02-05,Gadget_X,East,Medium,Physical damage on arrival,4.8,3
+INC-6629,2023-03-04,Gadget_X,East,Low,Connectivity loss,16.1,5
+INC-9625,2023-03-20,Gadget_Y,West,Low,Physical damage on arrival,8.2,1
+INC-8334,2023-03-31,Gadget_X,West,Critical,Battery drain,20.7,2
+INC-6565,2023-02-07,Gadget_Z,South,Low,Battery drain,12.7,2
+INC-5567,2023-01-31,Gadget_Z,West,Low,Battery drain,16.7,1
+INC-7617,2023-03-21,Gadget_X,East,High,Battery drain,14.7,4
+INC-4491,2023-03-08,Gadget_Y,North,Low,Overheating during charge,137.9,4
+INC-7960,2023-03-17,Gadget_Z,North,Medium,Connectivity loss,5.5,5
+INC-7811,2023-01-16,Gadget_X,North,Low,Screen flicker,43.9,3
+INC-9605,2023-02-14,Gadget_Y,South,Low,Connectivity loss,30.2,3
+INC-1364,2023-02-13,Gadget_Z,North,Low,Connectivity loss,11.3,2
+INC-7468,2023-02-24,Gadget_Y,West,Medium,Physical damage on arrival,1.3,2
+INC-7537,2023-01-10,Gadget_Y,East,Critical,Battery drain,17.7,1
+INC-7747,2023-03-19,Gadget_X,South,Low,Overheating during charge,1.2,2
+INC-4645,2023-02-21,Gadget_X,West,Medium,Battery drain,36.7,1
+INC-6111,2023-03-03,Gadget_X,East,Medium,Screen flicker,6.9,1
+INC-5992,2023-03-12,Gadget_Y,East,Medium,Connectivity loss,14.5,1
+INC-9347,2023-01-05,Gadget_X,South,Low,Overheating during charge,7.9,1
+INC-2410,2023-02-11,Gadget_X,East,Low,Battery drain,31.4,5
+INC-1997,2023-02-24,Gadget_X,South,Low,Battery drain,7.2,1
+INC-3248,2023-03-22,Gadget_X,South,Critical,Screen flicker,77.7,4
+INC-3376,2023-01-17,Gadget_Z,East,Medium,Connectivity loss,33.1,5
+INC-6585,2023-03-12,Gadget_X,East,Medium,Physical damage on arrival,1.4,1
+INC-8837,2023-03-17,Gadget_X,North,Low,Physical damage on arrival,17.4,1
+INC-1722,2023-01-12,Gadget_Y,North,High,Battery drain,4.5,1
+INC-5736,2023-03-20,Gadget_X,East,Low,Connectivity loss,37.9,3
+INC-8378,2023-03-17,Gadget_X,North,Low,Overheating during charge,6.5,3
+INC-2850,2023-03-03,Gadget_Z,West,Medium,Battery drain,29.5,3
+INC-1678,2023-02-18,Gadget_X,South,High,Screen flicker,11.2,2
+INC-7654,2023-01-09,Gadget_Z,North,Low,Battery drain,76.2,5
