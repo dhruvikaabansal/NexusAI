@@ -6,7 +6,7 @@ import ChartCard from '../components/ChartCard'
 import Chatbot from '../components/Chatbot'
 import { LogOut, UserCircle } from 'lucide-react'
 
-const API_URL = "http://localhost:8000"
+import { API_URL } from '../config'
 
 function Dashboard({ user }) {
     const { role } = useParams()

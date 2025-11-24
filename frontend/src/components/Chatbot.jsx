@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react'
 import { MessageSquare, X, Send, Bot, User } from 'lucide-react'
 import axios from 'axios'
 
-const API_URL = "http://localhost:8000"
+import { API_URL } from '../config'
 
 function Chatbot({ role, userId }) {
     const [isOpen, setIsOpen] = useState(false)
@@ -80,8 +80,8 @@ function Chatbot({ role, userId }) {
                         {messages.map((msg, idx) => (
                             <div key={idx} className={`flex ${msg.type === 'user' ? 'justify-end' : 'justify-start'}`}>
                                 <div className={`max-w-[80%] p-3 rounded-lg text-sm ${msg.type === 'user'
-                                        ? 'bg-primary text-white rounded-br-none'
-                                        : 'bg-white/10 text-gray-100 rounded-bl-none'
+                                    ? 'bg-primary text-white rounded-br-none'
+                                    : 'bg-white/10 text-gray-100 rounded-bl-none'
                                     }`}>
                                     <p>{msg.text}</p>
                                     {msg.sources && msg.sources.length > 0 && (

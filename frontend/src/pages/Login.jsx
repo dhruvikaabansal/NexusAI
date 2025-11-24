@@ -4,7 +4,7 @@ import axios from 'axios'
 import { signInWithPopup } from 'firebase/auth'
 import { auth, googleProvider } from '../firebase'
 
-const API_URL = "http://localhost:8000"
+import { API_URL } from '../config'
 
 function Login({ setUser }) {
     const [email, setEmail] = useState('alice@acme.com')

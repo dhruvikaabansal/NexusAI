@@ -26,7 +26,7 @@ services:
         fromService:
           type: web
           name: nexusai-backend
-          property: url
+          property: host
 
 databases:
   - name: nexusai-db
