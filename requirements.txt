@@ -1,9 +1,11 @@
 fastapi
 uvicorn
 pandas
-numpy
+python-multipart
 sentence-transformers
-scikit-learn
+google-generativeai
+sqlalchemy
+psycopg2-binary
 python-multipart
 requests
 pytest

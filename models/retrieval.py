@@ -1,11 +1,10 @@
 from sentence_transformers import SentenceTransformer, util
 import pandas as pd
-import sqlite3
+from app.database import get_db_connection
 import os
 
 class Retriever:
-    def __init__(self, db_path="hrcentral.db"):
-        self.db_path = db_path
+    def __init__(self):
         self.model = None
         self.cache = {} # Cache embeddings for demo speed
         
@@ -76,7 +75,7 @@ class Retriever:
         
         tables = list(set(tables))
         
-        conn = sqlite3.connect(self.db_path)
+        conn = get_db_connection()
         
         for table in tables:
             df = pd.read_sql(f"SELECT * FROM {table} ORDER BY id DESC LIMIT 50", conn) # Limit for demo speed
