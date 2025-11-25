@@ -1,73 +1,75 @@
 import pandas as pd
 import numpy as np
 import os
-import random
-from datetime import datetime, timedelta
-
-DATA_DIR = "data/synthetic"
-os.makedirs(DATA_DIR, exist_ok=True)
-
-def generate_manufacturing_data(n_rows=100):
-    print("Generating Manufacturing Data...")
-    dates = [datetime.now() - timedelta(days=x) for x in range(n_rows)]
-    data = {
-        "date": [d.strftime("%Y-%m-%d") for d in dates],
-        "line_id": [random.choice(["Line_A", "Line_B", "Line_C"]) for _ in range(n_rows)],
-        "throughput": [random.randint(800, 1200) for _ in range(n_rows)],
-        "downtime_minutes": [random.randint(0, 120) for _ in range(n_rows)],
-        "defect_rate": [round(random.uniform(0.01, 0.05), 3) for _ in range(n_rows)],
-        "shift": [random.choice(["Morning", "Evening", "Night"]) for _ in range(n_rows)]
-    }
-import pandas as pd
-import numpy as np
-import os
 
 # Ensure directory exists
 os.makedirs("data/synthetic", exist_ok=True)
 
 np.random.seed(42)
 
-# 1. Manufacturing Data
-# Added: energy_consumption, maintenance_cost, shift_id
-dates = pd.date_range(start="2023-01-01", periods=90, freq="D")
+# 1. Manufacturing Data - EXPANDED
+# Increased from 90 days to 180 days, 4 lines, 3 shifts = 2160 records
+dates = pd.date_range(start="2023-06-01", periods=180, freq="D")
 lines = ["Line_A", "Line_B", "Line_C", "Line_D"]
+shifts = ["Morning", "Evening", "Night"]
 mfg_data = []
 
 for date in dates:
     for line in lines:
-        throughput = np.random.normal(1000, 100)
-        downtime = np.random.exponential(20) if np.random.rand() > 0.8 else 0
-        defect_rate = np.random.beta(2, 50)
-        energy = throughput * 0.5 + np.random.normal(50, 5) # kWh
-        maint_cost = downtime * 50 # $50 per min of downtime
-        
-        mfg_data.append({
-            "date": date,
-            "line_id": line,
-            "throughput": int(throughput),
-            "downtime_minutes": int(downtime),
-            "defect_rate": round(defect_rate, 4),
-            "energy_consumption": round(energy, 2),
-            "maintenance_cost": round(maint_cost, 2),
-            "shift_id": np.random.choice(["Morning", "Evening", "Night"])
-        })
+        for shift in shifts:
+            # Realistic patterns: Night shift has more downtime, Line_C is older
+            base_throughput = 1000
+            if shift == "Night": base_throughput *= 0.95
+            if line == "Line_C": base_throughput *= 0.90
+            
+            throughput = int(np.random.normal(base_throughput, 80))
+            downtime = int(np.random.exponential(15) if np.random.rand() > 0.7 else 0)
+            if line == "Line_C": downtime = int(downtime * 1.5)  # Older line
+            
+            defect_rate = np.random.beta(2, 50)
+            energy = throughput * 0.5 + np.random.normal(50, 5)
+            maint_cost = downtime * 50 + np.random.normal(100, 20)
+            
+            mfg_data.append({
+                "date": date,
+                "line_id": line,
+                "throughput": throughput,
+                "downtime_minutes": downtime,
+                "defect_rate": round(defect_rate, 4),
+                "energy_consumption": round(energy, 2),
+                "maintenance_cost": round(maint_cost, 2),
+                "shift_id": shift
+            })
 
 pd.DataFrame(mfg_data).to_csv("data/synthetic/manufacturing.csv", index=False)
-print("Saved data/synthetic/manufacturing.csv")
+print(f"Saved data/synthetic/manufacturing.csv ({len(mfg_data)} records)")
 
-# 2. Sales Data
-# Added: profit, customer_segment, lead_source
-products = ["Gadget_X", "Gadget_Y", "Gadget_Z"]
+# 2. Sales Data - EXPANDED
+# 6 products, 4 regions, 180 days, 8 sales/day = 1440 records
+products = ["Gadget_X", "Gadget_Y", "Gadget_Z", "Widget_A", "Widget_B", "Device_Pro"]
 regions = ["North", "South", "East", "West"]
-sales_data = []
+segments = ["Enterprise", "SMB", "Consumer"]
+lead_sources = ["Web", "Referral", "Partner", "Direct", "Marketing"]
 
+# Product pricing and margins
+product_info = {
+    "Gadget_X": {"price": 50, "margin_range": (0.35, 0.45)},
+    "Gadget_Y": {"price": 150, "margin_range": (0.25, 0.35)},
+    "Gadget_Z": {"price": 300, "margin_range": (0.38, 0.48)},
+    "Widget_A": {"price": 80, "margin_range": (0.30, 0.40)},
+    "Widget_B": {"price": 200, "margin_range": (0.28, 0.38)},
+    "Device_Pro": {"price": 500, "margin_range": (0.40, 0.50)}
+}
+
+sales_data = []
 for date in dates:
-    for _ in range(5): # 5 sales per day
+    for _ in range(8):  # 8 sales per day
         prod = np.random.choice(products)
-        units = np.random.randint(10, 100)
-        price = {"Gadget_X": 50, "Gadget_Y": 150, "Gadget_Z": 300}[prod]
+        info = product_info[prod]
+        units = np.random.randint(5, 150)
+        price = info["price"]
         rev = units * price
-        margin = np.random.uniform(0.1, 0.4)
+        margin = np.random.uniform(*info["margin_range"])
         cost = rev * (1 - margin)
         profit = rev - cost
         
@@ -79,58 +81,96 @@ for date in dates:
             "revenue": rev,
             "margin": round(margin, 2),
             "profit": round(profit, 2),
-            "customer_segment": np.random.choice(["Enterprise", "SMB", "Consumer"]),
-            "lead_source": np.random.choice(["Web", "Referral", "Partner"])
+            "customer_segment": np.random.choice(segments, p=[0.3, 0.4, 0.3]),
+            "lead_source": np.random.choice(lead_sources)
         })
 
 pd.DataFrame(sales_data).to_csv("data/synthetic/sales.csv", index=False)
-print("Saved data/synthetic/sales.csv")
+print(f"Saved data/synthetic/sales.csv ({len(sales_data)} records)")
 
-# 3. Field Data (Incidents)
-# Added: resolution_time_hours, customer_satisfaction
+# 3. Field Data (Incidents) - EXPANDED
+# Increased from 50 to 200 incidents with more variety
 severities = ["Low", "Medium", "High", "Critical"]
-field_data = []
+incident_types = [
+    "Overheating during charge", "Screen flicker", "Battery drain", 
+    "Connectivity loss", "Physical damage on arrival", "Software crash",
+    "Button malfunction", "Audio distortion", "Camera failure",
+    "Charging port issue", "Water damage", "Performance lag"
+]
 
-for _ in range(50):
+field_data = []
+for _ in range(200):
+    severity = np.random.choice(severities, p=[0.4, 0.3, 0.2, 0.1])
+    # Resolution time varies by severity
+    if severity == "Critical":
+        res_time = np.random.uniform(48, 120)
+        csat = np.random.randint(1, 4)  # Lower satisfaction for critical
+    elif severity == "High":
+        res_time = np.random.uniform(24, 72)
+        csat = np.random.randint(2, 5)
+    elif severity == "Medium":
+        res_time = np.random.uniform(8, 48)
+        csat = np.random.randint(3, 6)
+    else:
+        res_time = np.random.uniform(2, 24)
+        csat = np.random.randint(4, 6)
+    
     field_data.append({
-        "incident_id": f"INC-{np.random.randint(1000, 9999)}",
+        "incident_id": f"INC-{np.random.randint(10000, 99999)}",
         "date": np.random.choice(dates),
         "product_id": np.random.choice(products),
         "region": np.random.choice(regions),
-        "severity": np.random.choice(severities, p=[0.4, 0.3, 0.2, 0.1]),
-        "description": np.random.choice([
-            "Overheating during charge", "Screen flicker", "Battery drain", 
-            "Connectivity loss", "Physical damage on arrival"
-        ]),
-        "resolution_time_hours": round(np.random.exponential(24), 1),
-        "customer_satisfaction": np.random.randint(1, 6) # 1-5 Stars
+        "severity": severity,
+        "description": np.random.choice(incident_types),
+        "resolution_time_hours": round(res_time, 1),
+        "customer_satisfaction": csat
     })
 
 pd.DataFrame(field_data).to_csv("data/synthetic/field.csv", index=False)
-print("Saved data/synthetic/field.csv")
+print(f"Saved data/synthetic/field.csv ({len(field_data)} records)")
 
-# 4. Users (HR Data)
-# Added: department, performance_score, tenure_years
+# 4. Users (HR Data) - EXPANDED
+# Increased from 49 to 100 employees with more departments
+departments = ["Executive", "Finance", "Operations", "HR", "Sales", "R&D", "Service", "Marketing", "IT"]
+roles_by_dept = {
+    "Executive": ["CEO", "CFO", "COO", "CTO"],
+    "Finance": ["Accountant", "Financial Analyst", "Controller"],
+    "Operations": ["Operations Manager", "Technician", "Quality Inspector"],
+    "HR": ["HR Manager", "Recruiter", "Training Specialist"],
+    "Sales": ["Sales Rep", "Account Manager", "Sales Engineer"],
+    "R&D": ["Engineer", "Researcher", "Product Manager"],
+    "Service": ["Support Specialist", "Field Technician"],
+    "Marketing": ["Marketing Manager", "Content Creator", "SEO Specialist"],
+    "IT": ["System Admin", "Developer", "Security Analyst"]
+}
+
 users = [
-    {"id": 1, "name": "Alice CEO", "email": "alice@acme.com", "role": "CEO", "department": "Executive", "performance": 5.0, "tenure": 5},
-    {"id": 2, "name": "Bob CFO", "email": "bob@acme.com", "role": "CFO", "department": "Finance", "performance": 4.8, "tenure": 4},
-    {"id": 3, "name": "Carol COO", "email": "carol@acme.com", "role": "COO", "department": "Operations", "performance": 4.5, "tenure": 7},
-    {"id": 4, "name": "Dana HR", "email": "dana@acme.com", "role": "HR", "department": "HR", "performance": 4.9, "tenure": 3},
-    {"id": 5, "name": "Eve Sales", "email": "eve@acme.com", "role": "Sales", "department": "Sales", "performance": 4.2, "tenure": 2},
+    {"id": 1, "name": "Alice CEO", "email": "alice@acme.com", "role": "CEO", "department": "Executive", "performance": 5.0, "tenure": 8},
+    {"id": 2, "name": "Bob CFO", "email": "bob@acme.com", "role": "CFO", "department": "Finance", "performance": 4.8, "tenure": 6},
+    {"id": 3, "name": "Carol COO", "email": "carol@acme.com", "role": "COO", "department": "Operations", "performance": 4.7, "tenure": 7},
+    {"id": 4, "name": "Dana HR", "email": "dana@acme.com", "role": "HR", "department": "HR", "performance": 4.9, "tenure": 5},
 ]
-# Generate random employees
-for i in range(6, 50):
-    role = np.random.choice(["Engineer", "Sales Rep", "Technician", "Support"])
-    dept = {"Engineer": "R&D", "Sales Rep": "Sales", "Technician": "Operations", "Support": "Service"}[role]
+
+# Generate 96 more employees
+for i in range(5, 101):
+    dept = np.random.choice(list(roles_by_dept.keys()), p=[0.04, 0.08, 0.15, 0.06, 0.20, 0.25, 0.10, 0.08, 0.04])
+    role = np.random.choice(roles_by_dept[dept])
+    
+    # Performance distribution: mostly good, some excellent, few poor
+    perf = np.clip(np.random.normal(3.8, 0.7), 1.0, 5.0)
+    tenure = np.random.choice([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], p=[0.15, 0.15, 0.15, 0.12, 0.12, 0.10, 0.08, 0.06, 0.04, 0.03])
+    
     users.append({
         "id": i,
-        "name": f"Employee {i}",
+        "name": f"{role.replace(' ', '')} {i}",
         "email": f"emp{i}@acme.com",
         "role": role,
         "department": dept,
-        "performance": round(np.random.normal(3.5, 0.8), 1),
-        "tenure": np.random.randint(1, 10)
+        "performance": round(perf, 1),
+        "tenure": tenure
     })
 
 pd.DataFrame(users).to_csv("data/synthetic/users.csv", index=False)
-print("Saved data/synthetic/users.csv")
+print(f"Saved data/synthetic/users.csv ({len(users)} records)")
+
+print(f"\n✅ Total records generated: {len(mfg_data) + len(sales_data) + len(field_data) + len(users)}")

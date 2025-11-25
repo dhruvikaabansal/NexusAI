@@ -1,51 +1,201 @@
 incident_id,date,product_id,region,severity,description,resolution_time_hours,customer_satisfaction
-INC-9119,2023-02-26,Gadget_Y,East,Low,Overheating during charge,35.1,2
-INC-9216,2023-03-16,Gadget_Z,South,Medium,Physical damage on arrival,30.5,1
-INC-7401,2023-01-18,Gadget_Z,North,Low,Connectivity loss,14.3,2
-INC-8164,2023-01-18,Gadget_Y,South,Low,Physical damage on arrival,51.9,5
-INC-9534,2023-02-21,Gadget_X,East,High,Screen flicker,48.1,5
-INC-6720,2023-03-09,Gadget_Y,East,Medium,Battery drain,5.4,3
-INC-4381,2023-03-21,Gadget_X,West,Critical,Physical damage on arrival,2.9,2
-INC-5152,2023-01-05,Gadget_Y,South,Low,Battery drain,10.1,2
-INC-3663,2023-02-27,Gadget_Y,East,Low,Battery drain,32.6,2
-INC-6092,2023-01-07,Gadget_Y,South,Medium,Connectivity loss,38.9,5
-INC-6636,2023-03-16,Gadget_Y,West,Medium,Physical damage on arrival,9.1,2
-INC-1759,2023-01-07,Gadget_Z,East,Medium,Connectivity loss,33.9,1
-INC-7154,2023-01-26,Gadget_X,North,Critical,Physical damage on arrival,15.2,5
-INC-2008,2023-02-09,Gadget_X,East,Critical,Physical damage on arrival,102.1,5
-INC-9075,2023-03-31,Gadget_X,West,High,Connectivity loss,16.9,5
-INC-3803,2023-02-23,Gadget_Z,North,Critical,Screen flicker,33.4,2
-INC-2388,2023-02-27,Gadget_Y,East,Critical,Connectivity loss,23.8,1
-INC-2223,2023-02-20,Gadget_Y,East,High,Physical damage on arrival,12.2,3
-INC-3569,2023-01-12,Gadget_Y,West,Critical,Connectivity loss,90.1,4
-INC-4681,2023-02-05,Gadget_X,East,Medium,Physical damage on arrival,4.8,3
-INC-6629,2023-03-04,Gadget_X,East,Low,Connectivity loss,16.1,5
-INC-9625,2023-03-20,Gadget_Y,West,Low,Physical damage on arrival,8.2,1
-INC-8334,2023-03-31,Gadget_X,West,Critical,Battery drain,20.7,2
-INC-6565,2023-02-07,Gadget_Z,South,Low,Battery drain,12.7,2
-INC-5567,2023-01-31,Gadget_Z,West,Low,Battery drain,16.7,1
-INC-7617,2023-03-21,Gadget_X,East,High,Battery drain,14.7,4
-INC-4491,2023-03-08,Gadget_Y,North,Low,Overheating during charge,137.9,4
-INC-7960,2023-03-17,Gadget_Z,North,Medium,Connectivity loss,5.5,5
-INC-7811,2023-01-16,Gadget_X,North,Low,Screen flicker,43.9,3
-INC-9605,2023-02-14,Gadget_Y,South,Low,Connectivity loss,30.2,3
-INC-1364,2023-02-13,Gadget_Z,North,Low,Connectivity loss,11.3,2
-INC-7468,2023-02-24,Gadget_Y,West,Medium,Physical damage on arrival,1.3,2
-INC-7537,2023-01-10,Gadget_Y,East,Critical,Battery drain,17.7,1
-INC-7747,2023-03-19,Gadget_X,South,Low,Overheating during charge,1.2,2
-INC-4645,2023-02-21,Gadget_X,West,Medium,Battery drain,36.7,1
-INC-6111,2023-03-03,Gadget_X,East,Medium,Screen flicker,6.9,1
-INC-5992,2023-03-12,Gadget_Y,East,Medium,Connectivity loss,14.5,1
-INC-9347,2023-01-05,Gadget_X,South,Low,Overheating during charge,7.9,1
-INC-2410,2023-02-11,Gadget_X,East,Low,Battery drain,31.4,5
-INC-1997,2023-02-24,Gadget_X,South,Low,Battery drain,7.2,1
-INC-3248,2023-03-22,Gadget_X,South,Critical,Screen flicker,77.7,4
-INC-3376,2023-01-17,Gadget_Z,East,Medium,Connectivity loss,33.1,5
-INC-6585,2023-03-12,Gadget_X,East,Medium,Physical damage on arrival,1.4,1
-INC-8837,2023-03-17,Gadget_X,North,Low,Physical damage on arrival,17.4,1
-INC-1722,2023-01-12,Gadget_Y,North,High,Battery drain,4.5,1
-INC-5736,2023-03-20,Gadget_X,East,Low,Connectivity loss,37.9,3
-INC-8378,2023-03-17,Gadget_X,North,Low,Overheating during charge,6.5,3
-INC-2850,2023-03-03,Gadget_Z,West,Medium,Battery drain,29.5,3
-INC-1678,2023-02-18,Gadget_X,South,High,Screen flicker,11.2,2
-INC-7654,2023-01-09,Gadget_Z,North,Low,Battery drain,76.2,5
+INC-24213,2023-06-08,Device_Pro,West,High,Connectivity loss,31.0,2
+INC-45968,2023-07-16,Device_Pro,South,Critical,Audio distortion,110.1,1
+INC-54119,2023-10-06,Gadget_Z,North,Low,Button malfunction,14.2,4
+INC-51572,2023-10-19,Widget_B,East,Critical,Audio distortion,61.0,3
+INC-98458,2023-11-03,Gadget_X,East,Medium,Charging port issue,40.5,5
+INC-45483,2023-10-13,Gadget_Z,South,Low,Software crash,20.0,5
+INC-14017,2023-06-08,Widget_A,East,High,Performance lag,31.0,3
+INC-20985,2023-11-09,Gadget_Y,West,High,Physical damage on arrival,28.9,2
+INC-39925,2023-11-27,Widget_B,West,High,Battery drain,59.3,3
+INC-16042,2023-08-17,Device_Pro,East,High,Audio distortion,60.6,4
+INC-76082,2023-10-24,Device_Pro,West,High,Audio distortion,66.7,3
+INC-33376,2023-08-16,Device_Pro,South,Low,Camera failure,19.8,5
+INC-36365,2023-10-18,Gadget_Y,South,Low,Physical damage on arrival,5.9,5
+INC-27125,2023-07-10,Gadget_X,East,Low,Charging port issue,22.0,4
+INC-91563,2023-11-22,Device_Pro,West,Low,Camera failure,13.5,5
+INC-62337,2023-06-24,Gadget_Z,South,Medium,Overheating during charge,16.5,5
+INC-23088,2023-06-30,Widget_A,East,Critical,Performance lag,84.4,3
+INC-42869,2023-10-18,Gadget_Z,East,High,Charging port issue,36.0,4
+INC-51520,2023-09-18,Device_Pro,South,Low,Charging port issue,8.9,5
+INC-90301,2023-07-19,Gadget_X,East,Medium,Button malfunction,20.4,3
+INC-97178,2023-07-07,Gadget_Y,West,Low,Software crash,15.0,5
+INC-28155,2023-10-25,Gadget_Z,West,High,Button malfunction,34.4,4
+INC-55849,2023-08-10,Widget_B,North,High,Performance lag,36.6,2
+INC-26982,2023-11-13,Gadget_Y,West,Medium,Software crash,44.6,5
+INC-76875,2023-07-22,Widget_A,West,Critical,Battery drain,111.5,1
+INC-68928,2023-08-27,Gadget_Z,South,Medium,Performance lag,41.8,5
+INC-43301,2023-10-08,Device_Pro,West,Low,Overheating during charge,9.1,4
+INC-29369,2023-08-13,Gadget_X,South,High,Button malfunction,36.7,2
+INC-28506,2023-10-16,Device_Pro,East,Low,Camera failure,17.7,4
+INC-10308,2023-06-16,Widget_B,West,Low,Battery drain,8.3,5
+INC-23366,2023-06-18,Gadget_X,South,High,Charging port issue,27.8,3
+INC-43339,2023-06-06,Widget_A,East,Medium,Battery drain,41.0,5
+INC-90370,2023-11-02,Device_Pro,West,Medium,Overheating during charge,8.8,5
+INC-84493,2023-08-07,Widget_B,East,Medium,Physical damage on arrival,37.2,5
+INC-12910,2023-10-16,Gadget_Y,South,High,Charging port issue,57.2,2
+INC-65082,2023-09-15,Widget_A,West,Medium,Performance lag,30.9,3
+INC-30954,2023-09-10,Gadget_Y,South,Low,Camera failure,21.7,5
+INC-42309,2023-11-18,Gadget_X,East,High,Camera failure,29.9,3
+INC-21580,2023-11-13,Gadget_Z,West,Medium,Overheating during charge,8.8,5
+INC-85306,2023-06-26,Gadget_Z,South,Low,Camera failure,14.5,4
+INC-17755,2023-08-12,Gadget_X,East,Low,Charging port issue,17.0,5
+INC-65049,2023-08-17,Widget_A,South,Low,Audio distortion,22.5,5
+INC-85263,2023-07-18,Device_Pro,East,High,Water damage,37.6,2
+INC-85199,2023-07-07,Device_Pro,North,Low,Physical damage on arrival,5.9,5
+INC-98563,2023-09-16,Device_Pro,West,High,Camera failure,70.8,3
+INC-50966,2023-09-02,Gadget_Y,West,Low,Water damage,15.5,5
+INC-77673,2023-08-14,Widget_B,North,Low,Physical damage on arrival,22.1,5
+INC-49666,2023-08-05,Gadget_Z,East,Low,Audio distortion,18.1,4
+INC-41917,2023-10-17,Gadget_Y,East,High,Charging port issue,35.4,2
+INC-61955,2023-09-29,Gadget_X,North,High,Water damage,32.3,3
+INC-18017,2023-11-06,Gadget_X,North,Low,Button malfunction,2.3,5
+INC-31063,2023-06-05,Gadget_Z,South,Medium,Software crash,41.7,3
+INC-76196,2023-10-23,Gadget_Z,South,Low,Water damage,6.5,5
+INC-20770,2023-11-13,Gadget_X,East,Low,Connectivity loss,15.9,4
+INC-62079,2023-08-29,Gadget_Z,North,High,Performance lag,40.5,2
+INC-63711,2023-06-11,Widget_A,East,High,Camera failure,42.7,2
+INC-45903,2023-06-11,Gadget_X,West,Low,Overheating during charge,20.0,5
+INC-74009,2023-07-24,Gadget_Y,East,High,Overheating during charge,54.8,3
+INC-83637,2023-10-25,Widget_A,West,Low,Camera failure,3.3,4
+INC-23182,2023-08-18,Gadget_X,North,Low,Button malfunction,20.9,5
+INC-93545,2023-11-21,Gadget_Y,West,Medium,Audio distortion,33.2,4
+INC-48597,2023-07-30,Device_Pro,South,Medium,Water damage,26.4,5
+INC-95417,2023-09-29,Gadget_Z,East,Critical,Connectivity loss,56.4,2
+INC-36889,2023-07-08,Widget_A,North,Low,Software crash,10.2,5
+INC-76939,2023-08-11,Gadget_Y,North,Low,Connectivity loss,15.9,5
+INC-43741,2023-10-04,Gadget_Y,East,Low,Battery drain,6.7,4
+INC-15147,2023-09-24,Gadget_Y,North,Low,Performance lag,9.2,4
+INC-15468,2023-10-02,Widget_B,East,Medium,Overheating during charge,41.2,3
+INC-66987,2023-06-10,Widget_A,South,Medium,Physical damage on arrival,39.6,5
+INC-70630,2023-06-28,Gadget_X,North,Low,Screen flicker,15.6,5
+INC-36433,2023-07-06,Gadget_Y,North,Low,Software crash,20.4,5
+INC-81819,2023-09-23,Gadget_Z,North,Low,Camera failure,11.9,4
+INC-57185,2023-07-14,Widget_A,South,High,Screen flicker,49.4,2
+INC-49633,2023-08-12,Gadget_X,West,Medium,Overheating during charge,36.3,3
+INC-14220,2023-06-11,Widget_A,East,High,Water damage,43.3,2
+INC-91103,2023-09-17,Gadget_Y,East,Low,Charging port issue,17.3,5
+INC-87895,2023-07-26,Widget_B,West,Low,Screen flicker,2.1,5
+INC-10765,2023-11-03,Gadget_Y,East,Medium,Physical damage on arrival,37.5,3
+INC-36999,2023-10-22,Device_Pro,North,Medium,Water damage,29.6,4
+INC-66929,2023-11-19,Gadget_X,South,High,Screen flicker,66.3,3
+INC-77881,2023-11-21,Gadget_X,East,High,Battery drain,60.4,2
+INC-48024,2023-10-30,Widget_B,North,Critical,Camera failure,94.2,2
+INC-71987,2023-11-02,Gadget_X,South,Critical,Camera failure,95.1,3
+INC-28854,2023-06-07,Widget_A,East,Low,Performance lag,6.2,5
+INC-38737,2023-07-17,Device_Pro,East,Medium,Software crash,39.0,4
+INC-69489,2023-06-09,Gadget_X,South,Medium,Water damage,22.5,5
+INC-36851,2023-06-24,Device_Pro,North,High,Performance lag,30.3,4
+INC-44105,2023-07-15,Device_Pro,North,Critical,Screen flicker,99.7,2
+INC-77062,2023-11-23,Device_Pro,South,Low,Software crash,9.4,4
+INC-89551,2023-10-15,Device_Pro,East,High,Audio distortion,70.9,4
+INC-56207,2023-10-05,Widget_A,West,Low,Audio distortion,11.6,5
+INC-61774,2023-09-28,Gadget_Y,East,High,Button malfunction,48.6,2
+INC-53147,2023-07-18,Widget_A,North,Low,Charging port issue,23.4,5
+INC-69321,2023-08-07,Widget_B,West,Medium,Physical damage on arrival,29.0,4
+INC-84232,2023-06-13,Widget_A,West,High,Software crash,33.5,4
+INC-29389,2023-06-26,Gadget_Z,South,High,Water damage,31.9,3
+INC-53779,2023-06-02,Widget_B,East,Critical,Overheating during charge,55.4,2
+INC-75820,2023-10-22,Gadget_Z,West,High,Performance lag,64.4,3
+INC-42297,2023-10-06,Gadget_X,West,High,Connectivity loss,68.2,3
+INC-92187,2023-10-02,Gadget_X,West,Low,Charging port issue,14.9,4
+INC-28403,2023-07-15,Device_Pro,South,High,Screen flicker,68.3,2
+INC-35456,2023-08-10,Device_Pro,South,Low,Battery drain,21.8,5
+INC-40103,2023-08-04,Gadget_X,South,Low,Performance lag,5.8,4
+INC-57852,2023-10-10,Gadget_X,East,High,Charging port issue,45.2,3
+INC-16521,2023-10-14,Gadget_Z,West,Low,Camera failure,2.7,5
+INC-13459,2023-09-24,Gadget_X,West,High,Performance lag,44.2,3
+INC-85253,2023-07-22,Device_Pro,West,Low,Physical damage on arrival,20.8,4
+INC-97321,2023-09-08,Gadget_X,East,Low,Physical damage on arrival,13.5,5
+INC-36553,2023-07-08,Gadget_Z,South,Low,Button malfunction,6.5,4
+INC-36574,2023-08-29,Gadget_X,East,Low,Audio distortion,14.6,5
+INC-71566,2023-08-22,Widget_A,West,Medium,Screen flicker,19.7,4
+INC-79037,2023-09-30,Device_Pro,North,High,Software crash,33.9,4
+INC-74322,2023-09-08,Device_Pro,North,Low,Performance lag,5.4,5
+INC-49605,2023-11-12,Widget_A,West,High,Water damage,26.8,4
+INC-21590,2023-07-14,Gadget_Y,South,Low,Button malfunction,13.1,5
+INC-30141,2023-11-16,Widget_B,South,Medium,Physical damage on arrival,22.3,3
+INC-26365,2023-10-01,Widget_A,North,High,Performance lag,69.0,3
+INC-40212,2023-09-20,Gadget_Z,North,Low,Connectivity loss,15.1,5
+INC-87568,2023-06-23,Gadget_Z,West,Medium,Audio distortion,47.3,3
+INC-92100,2023-06-30,Widget_A,North,Low,Audio distortion,18.1,5
+INC-96958,2023-07-13,Device_Pro,East,High,Button malfunction,37.1,4
+INC-69571,2023-08-25,Widget_B,South,Medium,Water damage,48.0,5
+INC-68384,2023-09-20,Widget_B,West,Medium,Connectivity loss,20.3,3
+INC-73175,2023-09-29,Widget_B,North,Medium,Screen flicker,18.0,5
+INC-85714,2023-09-20,Widget_A,North,High,Software crash,33.6,3
+INC-41589,2023-11-10,Widget_B,South,Low,Software crash,9.7,4
+INC-78413,2023-11-22,Widget_A,South,Medium,Water damage,40.2,5
+INC-15606,2023-08-27,Gadget_Y,East,High,Water damage,41.7,4
+INC-96205,2023-07-20,Widget_B,South,High,Software crash,27.8,4
+INC-48729,2023-11-08,Gadget_X,North,High,Physical damage on arrival,57.9,4
+INC-82620,2023-08-12,Widget_A,West,Low,Overheating during charge,20.4,4
+INC-46207,2023-09-06,Gadget_Z,North,High,Connectivity loss,64.3,3
+INC-87977,2023-06-13,Widget_B,West,Low,Battery drain,15.0,4
+INC-84382,2023-09-11,Gadget_X,West,Low,Overheating during charge,15.7,4
+INC-39552,2023-11-06,Gadget_Y,South,Low,Screen flicker,10.0,5
+INC-84095,2023-07-13,Widget_B,South,Low,Audio distortion,2.5,5
+INC-57131,2023-10-20,Widget_A,South,Medium,Button malfunction,34.6,4
+INC-69687,2023-10-26,Gadget_Y,East,Medium,Camera failure,34.5,3
+INC-85822,2023-11-26,Gadget_Y,South,Low,Audio distortion,12.6,5
+INC-56739,2023-09-24,Gadget_Y,East,Medium,Water damage,13.4,5
+INC-12733,2023-07-24,Gadget_Z,East,Medium,Button malfunction,30.2,5
+INC-34618,2023-10-05,Gadget_Z,West,High,Camera failure,69.7,2
+INC-13410,2023-08-18,Widget_B,North,Medium,Screen flicker,15.3,3
+INC-47344,2023-09-06,Device_Pro,West,Critical,Water damage,48.7,1
+INC-36399,2023-08-05,Gadget_Z,West,High,Connectivity loss,36.8,2
+INC-99117,2023-06-11,Gadget_Y,South,High,Screen flicker,49.7,4
+INC-77902,2023-09-25,Widget_B,North,High,Connectivity loss,33.2,4
+INC-72933,2023-11-03,Gadget_Z,North,High,Button malfunction,33.2,4
+INC-19890,2023-11-24,Widget_B,East,Low,Water damage,14.3,5
+INC-17375,2023-11-05,Widget_B,North,Medium,Performance lag,17.8,3
+INC-94618,2023-06-24,Widget_A,West,Medium,Button malfunction,44.5,4
+INC-61408,2023-10-09,Gadget_Z,East,Low,Performance lag,9.3,4
+INC-60094,2023-10-14,Gadget_X,East,Low,Connectivity loss,4.4,4
+INC-85978,2023-06-21,Device_Pro,West,Low,Physical damage on arrival,21.2,5
+INC-99425,2023-07-16,Widget_A,North,Medium,Connectivity loss,16.9,3
+INC-71557,2023-11-21,Gadget_Z,West,Critical,Charging port issue,73.7,1
+INC-35800,2023-08-03,Widget_A,South,Medium,Battery drain,16.9,4
+INC-93672,2023-08-30,Device_Pro,North,Low,Water damage,15.4,4
+INC-64165,2023-09-11,Gadget_X,South,Low,Physical damage on arrival,11.3,5
+INC-10982,2023-08-03,Widget_B,West,Medium,Overheating during charge,23.9,3
+INC-50508,2023-07-02,Gadget_Z,South,Medium,Physical damage on arrival,20.6,4
+INC-77418,2023-10-08,Gadget_Z,North,Critical,Physical damage on arrival,68.2,3
+INC-63350,2023-09-21,Gadget_Z,West,Low,Battery drain,6.8,4
+INC-16189,2023-06-06,Gadget_Y,North,Medium,Charging port issue,9.8,4
+INC-33093,2023-08-15,Gadget_X,West,Low,Software crash,16.1,4
+INC-62861,2023-08-15,Gadget_X,North,Medium,Audio distortion,31.9,3
+INC-62713,2023-07-09,Gadget_Y,West,Low,Water damage,17.6,5
+INC-66903,2023-08-04,Gadget_X,East,Critical,Audio distortion,52.1,1
+INC-65206,2023-09-13,Gadget_Y,East,High,Audio distortion,44.0,3
+INC-52365,2023-10-21,Widget_A,West,High,Connectivity loss,52.8,4
+INC-78459,2023-10-16,Gadget_X,North,Medium,Button malfunction,23.9,5
+INC-30614,2023-08-11,Gadget_Z,West,High,Performance lag,24.7,4
+INC-96586,2023-09-17,Gadget_X,North,Low,Water damage,21.4,4
+INC-89686,2023-09-11,Widget_B,East,Medium,Camera failure,19.0,5
+INC-56190,2023-11-22,Gadget_Z,North,High,Water damage,56.3,2
+INC-22924,2023-10-30,Widget_B,West,Medium,Physical damage on arrival,39.6,5
+INC-64255,2023-09-06,Gadget_X,South,High,Screen flicker,61.7,4
+INC-80719,2023-06-28,Gadget_X,South,Low,Physical damage on arrival,20.4,5
+INC-44934,2023-11-18,Gadget_Y,South,Medium,Overheating during charge,17.6,3
+INC-56064,2023-06-20,Device_Pro,West,High,Connectivity loss,34.4,3
+INC-73205,2023-07-17,Gadget_Y,North,Low,Button malfunction,4.4,5
+INC-93716,2023-11-20,Gadget_X,West,Medium,Battery drain,30.9,4
+INC-13546,2023-07-01,Widget_A,South,Medium,Audio distortion,35.9,4
+INC-92015,2023-09-01,Gadget_X,North,Low,Performance lag,21.6,4
+INC-60694,2023-11-05,Widget_B,East,Low,Performance lag,19.1,5
+INC-54770,2023-06-02,Widget_B,West,Critical,Battery drain,95.2,3
+INC-35957,2023-06-22,Gadget_X,South,High,Software crash,54.4,3
+INC-66639,2023-10-31,Device_Pro,North,Critical,Physical damage on arrival,56.6,1
+INC-77050,2023-08-31,Gadget_X,East,Low,Charging port issue,19.1,5
+INC-51658,2023-11-15,Gadget_Z,South,Low,Software crash,10.5,4
+INC-26855,2023-10-09,Device_Pro,West,Medium,Battery drain,9.2,4
+INC-86963,2023-10-23,Device_Pro,North,Low,Performance lag,23.4,4
+INC-27456,2023-07-21,Gadget_Y,West,Low,Water damage,9.6,5
+INC-62672,2023-08-02,Gadget_Y,South,Medium,Charging port issue,33.4,3
+INC-81449,2023-09-16,Device_Pro,West,Low,Performance lag,18.7,4
+INC-91179,2023-07-31,Widget_A,North,High,Camera failure,57.0,2
+INC-29558,2023-08-27,Widget_B,East,Low,Overheating during charge,12.3,5
+INC-22572,2023-07-27,Gadget_Y,South,Low,Charging port issue,11.0,5
+INC-86286,2023-06-02,Widget_A,East,Medium,Physical damage on arrival,33.4,3
+INC-37575,2023-09-22,Gadget_Y,West,Medium,Overheating during charge,9.6,4
